@@ -125,12 +125,12 @@ function human_days($days,$format)
     {
         $night = $numberDays - 1;
         if ($format == "ods" or $format == "odf")
-            $output = "$numberDays <span class='label'>" . day_days($numberDays,$format) . "</span>";
+            $output = "$numberDays <span class='dtd-label'>" . day_days($numberDays,$format) . "</span>";
         else
-            $output = "$numberDays <span class='label'>" . day_days($numberDays,$format) . "</span> / $night  <span class='label'>" . night_nights($night,$format)."</span>";
+            $output = "$numberDays <span class='dtd-label'>" . day_days($numberDays,$format) . "</span> / $night  <span class='dtd-label'>" . night_nights($night,$format)."</span>";
     } else {
         if ($numberDays == 0.5){
-            return t("1/2 <span class='label'>". day_days($numberDays,$format) . "</span>");
+            return t("1/2 <span class='small dtd-label'>". day_days($numberDays,$format) . "</span>");
         } else {
             return t("Full Day");
         }
